@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const Joi = require('joi');
 module.exports.listingSchema=Joi.object({
