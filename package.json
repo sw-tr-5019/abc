@@ -2,7 +2,7 @@
   "name": "major-project",
   "version": "1.0.0",
   "description": "Major Project Of Frontend & Backend",
-  "main": "index.js",
+  "main": "app.js",
     
   
   "scripts": {
@@ -29,8 +29,4 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^8.0.0"
   }
-
-   
-  
-  
 }
