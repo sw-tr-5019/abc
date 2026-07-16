@@ -17,7 +17,7 @@ const ejsMate=require("ejs-mate");
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded({extended:true}));
-const mongo_url='mongodb://127.0.0.1:27017/swastik_bnb';
+const mongo_url=process.env.ATLAS_DB_URL;
 async function main(){
     await mongoose.connect(mongo_url);};
 main().then(()=>{
