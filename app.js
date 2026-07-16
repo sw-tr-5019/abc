@@ -1,5 +1,6 @@
 if(process.env.NODE_ENV !='production'){require('dotenv').config();}
 const express=require('express');
+const PORT = process.env.PORT || 9105;
 const app=express();
 const mongoose=require('mongoose');
 const path=require('path');
@@ -126,4 +127,4 @@ app.all("*",(req,res,next)=>{
 app.use((err,req,res,next)=>{
     let {statusCode='500',message='Sorry Something Went Wrong'}=err; 
      res.status(statusCode).render('./listings/error.ejs',{err});    });    
-app.listen(9105,()=>console.log("Port At 9105 "));
+app.listen(PORT, () => {    console.log(`🚀 Server running on port ${PORT}`);});
